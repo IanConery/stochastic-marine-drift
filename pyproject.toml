@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stochastic-marine-drift"
+version = "0.1.0"
+description = "A bi-directional, ensemble-based fluid dynamics and machine learning framework for historical shipwreck drift reconstruction in the Caribbean."
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
