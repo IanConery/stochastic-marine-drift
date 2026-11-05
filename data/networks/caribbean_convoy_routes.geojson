@@ -1,0 +1,423 @@
+{
+  "type": "FeatureCollection",
+  "name": "caribbean_convoy_routes",
+  "description": "Historical Carrera de Indias maritime trade routes, roadsteads, and navigational choke points (16th-18th Century).",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node_portobelo",
+      "geometry": { "type": "Point", "coordinates": [-79.660, 9.550] },
+      "properties": {
+        "node_id": "portobelo",
+        "name": "Portobelo (Tierra Firme Terminal)",
+        "type": "port",
+        "latitude": 9.550,
+        "longitude": -79.660,
+        "significance": "Isthmus of Panama Pacific silver transfer terminal"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_cartagena",
+      "geometry": { "type": "Point", "coordinates": [-75.550, 10.420] },
+      "properties": {
+        "node_id": "cartagena",
+        "name": "Cartagena de Indias",
+        "type": "port",
+        "latitude": 10.420,
+        "longitude": -75.550,
+        "significance": "Primary South American fortified galeones roadstead"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_veracruz",
+      "geometry": { "type": "Point", "coordinates": [-96.130, 19.200] },
+      "properties": {
+        "node_id": "veracruz",
+        "name": "San Juan de Ulua / Veracruz",
+        "type": "port",
+        "latitude": 19.200,
+        "longitude": -96.130,
+        "significance": "New Spain Flota departure port"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_havana",
+      "geometry": { "type": "Point", "coordinates": [-82.350, 23.140] },
+      "properties": {
+        "node_id": "havana",
+        "name": "Havana (San Cristobal)",
+        "type": "port",
+        "latitude": 23.140,
+        "longitude": -82.350,
+        "significance": "Master rendezvous port where Flota and Galeones combined before Atlantic transit"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_yucatan_channel",
+      "geometry": { "type": "Point", "coordinates": [-85.500, 21.750] },
+      "properties": {
+        "node_id": "yucatan_channel",
+        "name": "Yucatan Channel",
+        "type": "choke_point",
+        "latitude": 21.750,
+        "longitude": -85.500,
+        "significance": "Narrow transit choke between Cuba and Yucatan Peninsula"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_santiago_cuba",
+      "geometry": { "type": "Point", "coordinates": [-75.830, 20.020] },
+      "properties": {
+        "node_id": "santiago_cuba",
+        "name": "Santiago de Cuba",
+        "type": "port",
+        "latitude": 20.020,
+        "longitude": -75.830,
+        "significance": "Southern Cuban escort roadstead"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_santo_domingo",
+      "geometry": { "type": "Point", "coordinates": [-69.890, 18.470] },
+      "properties": {
+        "node_id": "santo_domingo",
+        "name": "Santo Domingo",
+        "type": "port",
+        "latitude": 18.470,
+        "longitude": -69.890,
+        "significance": "Hispaniola colonial administrative port"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_san_juan",
+      "geometry": { "type": "Point", "coordinates": [-66.120, 18.470] },
+      "properties": {
+        "node_id": "san_juan",
+        "name": "San Juan (Puerto Rico)",
+        "type": "port",
+        "latitude": 18.470,
+        "longitude": -66.120,
+        "significance": "Eastern Caribbean gateway fortification"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_mona_passage",
+      "geometry": { "type": "Point", "coordinates": [-67.850, 18.250] },
+      "properties": {
+        "node_id": "mona_passage",
+        "name": "Mona Passage",
+        "type": "choke_point",
+        "latitude": 18.250,
+        "longitude": -67.850,
+        "significance": "High tidal rip passage between Puerto Rico and Hispaniola"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_windward_passage",
+      "geometry": { "type": "Point", "coordinates": [-73.800, 20.000] },
+      "properties": {
+        "node_id": "windward_passage",
+        "name": "Windward Passage",
+        "type": "choke_point",
+        "latitude": 20.000,
+        "longitude": -73.800,
+        "significance": "Choke point separating Cuba from Hispaniola"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_old_bahama_channel",
+      "geometry": { "type": "Point", "coordinates": [-78.000, 22.500] },
+      "properties": {
+        "node_id": "old_bahama_channel",
+        "name": "Old Bahama Channel",
+        "type": "choke_point",
+        "latitude": 22.500,
+        "longitude": -78.000,
+        "significance": "Narrow barrier reef transit along north Cuban coast"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_florida_straits_marquesas",
+      "geometry": { "type": "Point", "coordinates": [-82.000, 24.500] },
+      "properties": {
+        "node_id": "florida_straits_marquesas",
+        "name": "Florida Straits (Marquesas / Tortugas)",
+        "type": "choke_point",
+        "latitude": 24.500,
+        "longitude": -82.000,
+        "significance": "Catastrophic hurricane reef grounding corridor (Atocha 1622 site)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_florida_straits_canaveral",
+      "geometry": { "type": "Point", "coordinates": [-79.800, 28.000] },
+      "properties": {
+        "node_id": "florida_straits_canaveral",
+        "name": "Florida Straits (Cape Canaveral / Fort Pierce)",
+        "type": "choke_point",
+        "latitude": 28.000,
+        "longitude": -79.800,
+        "significance": "Northward Gulf Stream jet corridor (1715 Plate Fleet site)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node_bermuda_approach",
+      "geometry": { "type": "Point", "coordinates": [-64.750, 32.300] },
+      "properties": {
+        "node_id": "bermuda_approach",
+        "name": "Bermuda Approach / Atlantic Corridor",
+        "type": "roadstead",
+        "latitude": 32.300,
+        "longitude": -64.750,
+        "significance": "Western Atlantic waypoint toward the Azores and Spain"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_portobelo_cartagena",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-79.660, 9.550], [-77.600, 10.000], [-75.550, 10.420]]
+      },
+      "properties": {
+        "edge_id": "portobelo_cartagena",
+        "name": "Tierra Firme Coastal Run",
+        "source": "portobelo",
+        "target": "cartagena",
+        "distance_nmi": 260.0,
+        "hazard_level": 0.25,
+        "prevailing_current_knots": 0.8,
+        "prevailing_wind_heading_deg": 270.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_cartagena_yucatan",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-75.550, 10.420], [-80.500, 15.000], [-85.500, 21.750]]
+      },
+      "properties": {
+        "edge_id": "cartagena_yucatan",
+        "name": "Caribbean Basin Crossing (Galeones Route)",
+        "source": "cartagena",
+        "target": "yucatan_channel",
+        "distance_nmi": 850.0,
+        "hazard_level": 0.45,
+        "prevailing_current_knots": 1.2,
+        "prevailing_wind_heading_deg": 280.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_yucatan_havana",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-85.500, 21.750], [-84.000, 22.800], [-82.350, 23.140]]
+      },
+      "properties": {
+        "edge_id": "yucatan_havana",
+        "name": "Yucatan to Havana Coastal Run",
+        "source": "yucatan_channel",
+        "target": "havana",
+        "distance_nmi": 210.0,
+        "hazard_level": 0.35,
+        "prevailing_current_knots": 1.8,
+        "prevailing_wind_heading_deg": 260.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_veracruz_havana",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-96.130, 19.200], [-90.000, 22.500], [-85.500, 23.500], [-82.350, 23.140]]
+      },
+      "properties": {
+        "edge_id": "veracruz_havana",
+        "name": "Gulf of Mexico Transit (Flota de Nueva Espana)",
+        "source": "veracruz",
+        "target": "havana",
+        "distance_nmi": 820.0,
+        "hazard_level": 0.40,
+        "prevailing_current_knots": 0.6,
+        "prevailing_wind_heading_deg": 250.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_havana_marquesas",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-82.350, 23.140], [-82.150, 23.800], [-82.000, 24.500]]
+      },
+      "properties": {
+        "edge_id": "havana_marquesas",
+        "name": "Havana to Marquesas Departure (Straits of Florida)",
+        "source": "havana",
+        "target": "florida_straits_marquesas",
+        "distance_nmi": 95.0,
+        "hazard_level": 0.85,
+        "prevailing_current_knots": 2.5,
+        "prevailing_wind_heading_deg": 240.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_marquesas_canaveral",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-82.000, 24.500], [-80.200, 25.500], [-79.800, 28.000]]
+      },
+      "properties": {
+        "edge_id": "marquesas_canaveral",
+        "name": "Florida Straits Gulf Stream Jet",
+        "source": "florida_straits_marquesas",
+        "target": "florida_straits_canaveral",
+        "distance_nmi": 250.0,
+        "hazard_level": 0.75,
+        "prevailing_current_knots": 3.5,
+        "prevailing_wind_heading_deg": 220.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_canaveral_bermuda",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-79.800, 28.000], [-74.000, 30.500], [-64.750, 32.300]]
+      },
+      "properties": {
+        "edge_id": "canaveral_bermuda",
+        "name": "North Atlantic Exit Corridor to Bermuda",
+        "source": "florida_straits_canaveral",
+        "target": "bermuda_approach",
+        "distance_nmi": 860.0,
+        "hazard_level": 0.50,
+        "prevailing_current_knots": 1.5,
+        "prevailing_wind_heading_deg": 250.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_san_juan_mona",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-66.120, 18.470], [-67.100, 18.350], [-67.850, 18.250]]
+      },
+      "properties": {
+        "edge_id": "san_juan_mona",
+        "name": "Puerto Rico North Coast to Mona Passage",
+        "source": "san_juan",
+        "target": "mona_passage",
+        "distance_nmi": 105.0,
+        "hazard_level": 0.40,
+        "prevailing_current_knots": 1.0,
+        "prevailing_wind_heading_deg": 270.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_santo_domingo_mona",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-69.890, 18.470], [-68.800, 18.350], [-67.850, 18.250]]
+      },
+      "properties": {
+        "edge_id": "santo_domingo_mona",
+        "name": "Santo Domingo to Mona Passage",
+        "source": "santo_domingo",
+        "target": "mona_passage",
+        "distance_nmi": 120.0,
+        "hazard_level": 0.35,
+        "prevailing_current_knots": 0.9,
+        "prevailing_wind_heading_deg": 270.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_mona_old_bahama",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-67.850, 18.250], [-72.000, 21.000], [-78.000, 22.500]]
+      },
+      "properties": {
+        "edge_id": "mona_old_bahama",
+        "name": "Mona Passage to Old Bahama Channel",
+        "source": "mona_passage",
+        "target": "old_bahama_channel",
+        "distance_nmi": 630.0,
+        "hazard_level": 0.65,
+        "prevailing_current_knots": 0.8,
+        "prevailing_wind_heading_deg": 260.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_old_bahama_havana",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-78.000, 22.500], [-80.500, 23.200], [-82.350, 23.140]]
+      },
+      "properties": {
+        "edge_id": "old_bahama_havana",
+        "name": "Old Bahama Channel to Havana",
+        "source": "old_bahama_channel",
+        "target": "havana",
+        "distance_nmi": 255.0,
+        "hazard_level": 0.60,
+        "prevailing_current_knots": 1.2,
+        "prevailing_wind_heading_deg": 250.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_santiago_windward",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-75.830, 20.020], [-74.800, 20.010], [-73.800, 20.000]]
+      },
+      "properties": {
+        "edge_id": "santiago_windward",
+        "name": "Santiago de Cuba to Windward Passage",
+        "source": "santiago_cuba",
+        "target": "windward_passage",
+        "distance_nmi": 115.0,
+        "hazard_level": 0.35,
+        "prevailing_current_knots": 1.0,
+        "prevailing_wind_heading_deg": 270.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "edge_windward_havana",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-73.800, 20.000], [-78.000, 22.500], [-82.350, 23.140]]
+      },
+      "properties": {
+        "edge_id": "windward_havana",
+        "name": "Windward Passage to Havana via Channel",
+        "source": "windward_passage",
+        "target": "havana",
+        "distance_nmi": 540.0,
+        "hazard_level": 0.55,
+        "prevailing_current_knots": 1.1,
+        "prevailing_wind_heading_deg": 260.0
+      }
+    }
+  ]
+}
