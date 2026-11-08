@@ -19,16 +19,19 @@ def test_load_convoy_network():
         "data/networks/caribbean_convoy_routes.geojson"
     )
 
-    assert len(graph.nodes) == 14
-    assert len(edge_records) == 13
-    assert len(node_to_idx) == 14
+    assert len(graph.nodes) == 21
+    assert len(edge_records) == 25
+    assert len(node_to_idx) == 21
 
-    # Verify key historical ports and choke points
+    # Verify key historical ports, roadsteads, and choke points
     expected_nodes = [
         "havana",
         "cartagena",
         "veracruz",
         "portobelo",
+        "port_royal",
+        "dry_tortugas",
+        "isle_of_pines",
         "florida_straits_marquesas",
         "florida_straits_canaveral",
         "mona_passage",
@@ -38,9 +41,9 @@ def test_load_convoy_network():
         assert nid in node_to_idx
 
     # Verify PyTorch Geometric tensor properties
-    assert pyg_data.x.shape == (14, 4)
-    assert pyg_data.edge_index.shape == (2, 13)
-    assert pyg_data.edge_attr.shape == (13, 4)
+    assert pyg_data.x.shape == (21, 4)
+    assert pyg_data.edge_index.shape == (2, 25)
+    assert pyg_data.edge_attr.shape == (25, 4)
 
 
 def test_convoy_gnn_forward_pass():
@@ -72,8 +75,8 @@ def test_dynamic_features_construction():
 
     # 1. Calm baseline
     x_calm, e_calm = evaluator.build_dynamic_features(cyclone=None)
-    assert x_calm.shape == (14, 6)
-    assert e_calm.shape == (13, 5)
+    assert x_calm.shape == (21, 6)
+    assert e_calm.shape == (25, 5)
     # Storm intensity in edge features should be zero
     assert torch.all(e_calm[:, 4] == 0.0)
 

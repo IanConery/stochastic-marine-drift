@@ -106,7 +106,7 @@ def query_systemone_endpoint(
         raw_text: Source historical text.
         record: Extracted candidate record.
         endpoint_url: Base URL (e.g., http://localhost:8000/v1/systemone).
-        model_name: Model identifier (e.g. 'jaredpalmer/kev-4b' or 'typesafe/jev-latest').
+        model_name: Model identifier (e.g. 'jaredpalmer/kev-0.8b' or 'typesafe/jev-latest').
         api_key: Optional bearer token or API key.
         timeout_s: Network timeout in seconds.
 

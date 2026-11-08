@@ -174,6 +174,22 @@ All benchmark simulations export unified GeoJSON (`data/processed/historical_ben
 
 ---
 
-## 10. Roadmap: Phase 10 & Phase 11 Expansion
-* **Phase 10 (Corpus Expansion & Generalization)**: Ingests 100+ historical shipwrecks from Wikipedia archives, implements a stratified 75/25 train/test holdout split, incorporates submerged colonial ports and roadsteads into `convoy_gnn.py`, and retrains survival models on unseen test cohorts.
-* **Phase 11 (Interactive Visualization Suite)**: Generates standalone interactive Leaflet maps, 3D water column hydrodynamic descent glide trajectories, and dynamic hull fatigue diagnostic curves.
+## 10. Supervised Retraining & Out-of-Sample Holdout Pipeline (`retrain_pipeline.py`)
+
+Executes the automated Step 5 retraining and evaluation loop on the real-world historical corpus extracted from Wikimedia XML dumps:
+
+1. **Ingestion & Stratified Partitioning**:
+   * Reads 4,110 extracted Caribbean casualty records from `data/raw/wikipedia_maritime_extracts.jsonl` and 363 spatial wrecks from `data/processed/expanded_shipwreck_catalog.geojson`.
+   * Preserves a rigorous 75/25 stratified holdout partition (3,084 train / 1,026 test) across Macro-Archetypes and taphonomic exposure classes.
+   * Ingests 27 right-censored near-miss observations (intentional beachings, survived damaged with jettisoned cargo) alongside catastrophic foundering losses to directly eliminate Abraham Wald survivorship bias.
+2. **Lagrangian Backtracking Calibration**:
+   * Traces discrete Lagrangian particle ensembles backward from confirmed seafloor depths to compute Surface Points of Sink (SPS).
+3. **Dynamic Foundering Retraining**:
+   * Refits `DynamicFounderingModel` with Hierarchical Bayesian partial pooling across macro-archetypes, serialized to `data/processed/foundering_model.pkl`.
+4. **Convoy Breakdown GNN Retraining**:
+   * Retrains `ConvoyBreakdownGNN` on the expanded 21-node, 25-edge roadstead navigation network (`data/networks/caribbean_convoy_routes.geojson`), serialized to `data/processed/convoy_gnn.pt`.
+5. **Out-of-Sample Evaluation Metrics (`data/processed/phase10_retraining_metrics.json`)**:
+   * **Harrell's $C$-index**: **0.9086** on unseen test cohort.
+   * **Brier Score**: **0.2815**.
+   * **Mean SAR Area Reduction**: **97.5%** against naive 20 nmi LKP uncertainty circles.
+   * **GNN Final Training Loss**: **$4 \times 10^{-5}$**.

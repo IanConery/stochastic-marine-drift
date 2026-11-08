@@ -43,7 +43,15 @@ $$\text{Grounding Trigger: } D_{\text{eff}}(t, \mathbf{x}) \le Z_{\text{draft}}$
 When effective depth drops below keel draft, particle motion terminates immediately and registers a `GROUNDED_ON_REEF` event.
 
 ### G. Archival Knowledge Extraction Engine (`wiki_extractor.py`)
-High-speed streaming parser extracting historical maritime wreck accounts and colonial roadsteads from compressed archives (`/mnt/storage/wiki/wiki_dump.json.bz2`):
-* Filters articles within geographic bounds ($9^\circ\text{N}\text{--}35^\circ\text{N}$, $98^\circ\text{W}\text{--}55^\circ\text{W}$).
-* Structures narrative loss accounts, dates, infoboxes, and coordinates.
+High-speed streaming parser extracting historical maritime wreck accounts, right-censored near-miss casualties (Abraham Wald survivorship bias mitigation), and taphonomic exposure regimes from compressed archives (`enwiki_*.xml.bz2` and JSON dumps):
+* Filters articles within geographic bounds ($9^\circ\text{N}\text{--}35^\circ\text{N}$, $-98^\circ\text{W}\text{ to }-55^\circ\text{W}$).
+* Structures narrative loss accounts, dates, infoboxes, coordinates, and canonical Wikipedia URLs (`wiki_url`).
+* Categorizes sites into `sheltered_deep`, `sheltered_topographic`, and `exposed_high_energy` taphonomic regimes.
 * Generates an expanded catalog (100+ wrecks) with a stratified 75/25 train/test holdout partition.
+
+### H. Colonial Roadsteads & Convoy Routing Network (`roadstead_network.py`)
+Geospatial graph expansion engine incorporating historical Caribbean roadsteads, submerged colonial ports, and emergency diversion corridors:
+* **Submerged Ports**: Ingests *Port Royal* (Jamaica; submerged 1692) and *Nombre de Dios* (Panama; silted/abandoned 1596).
+* **Hurricane Roadsteads**: Incorporates *Dry Tortugas* (Florida Straits holding ground), *Isle of Pines* (Cuba hurricane lee), *Roatán* (Bay Islands careening bay), *Virgin Gorda* (Anegada Passage staging), and *Sint Eustatius* (Leeward Islands roadstead).
+* **Corridor Diversions**: Automatically computes geodesic distances and wind/current hazard parameters for emergency detour edges connecting roadsteads to the main Carrera de Indias trunk routes.
+* **Graph Integration**: Exports fully compatible GeoJSON for [`src/models/convoy_gnn.py`](../models/convoy_gnn.py), expanding the network topology from 14 to 21 nodes and 13 to 25 edges.

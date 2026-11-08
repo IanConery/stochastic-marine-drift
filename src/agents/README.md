@@ -6,7 +6,7 @@ This package bridges the gap between unstructured historical maritime archives (
 
 ## 1. Dual-Model Architecture: Qwen 3.8 + Kev Quality Judge
 
-The language processing pipeline consolidates all generative intelligence into a single foundational model (`Qwen 3.8`) paired with an ultra-fast discriminative verification judge (`jaredpalmer/kev-4b`):
+The language processing pipeline consolidates all generative intelligence into a single foundational model (`Qwen 3.8`) paired with an ultra-fast discriminative verification judge (`jaredpalmer/kev-0.8b`):
 
 ```mermaid
 flowchart TD
@@ -14,7 +14,7 @@ flowchart TD
 
     QWEN --> JSON["Extracted Structured Record<br/>(mast_count, rig_type, draft, tonnage)"]
 
-    RAW --> KEV["2. Kev System-One Quality Judge<br/>(jaredpalmer/kev-4b)<br/>• Non-autoregressive discriminative head (70–300 ms)"]
+    RAW --> KEV["2. Kev System-One Quality Judge<br/>(jaredpalmer/kev-0.8b)<br/>• Non-autoregressive discriminative head (15–30 ms)<br/>• Lightweight (~1.6 GB FP16 / ~600 MB 4-bit)"]
     JSON --> KEV
 
     KEV --> VERDICT{"Kev Decisions:<br/>• Noul: Hallucination detected?<br/>• Choice: Credibility Tier [1, 2, 3]<br/>• Score: Extraction confidence"}
@@ -28,7 +28,7 @@ flowchart TD
 ## 2. Kev / Jev System-One Decision Protocol
 
 **Kev** (open-source on Hugging Face, built on Qwen bases) and **Jev** (TypeSafe AI) are non-autoregressive discriminative decision models:
-* Instead of slow token-by-token generation, they evaluate state and questions in **70 to 300 milliseconds**.
+* Instead of slow token-by-token generation, `kev-0.8b` evaluates state and questions in **15 to 30 milliseconds**.
 * **`Noul` (Boolean)**: Verifies whether extracted numbers (tonnage, mast count) are grounded in the source text without hallucination.
 * **`Choice`**: Categorizes archival provenance into credibility tiers with calibrated probability distributions.
 

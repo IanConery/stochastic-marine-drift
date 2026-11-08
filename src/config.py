@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     # System-One Judge Configuration (Kev / Jev)
     judge_enabled: bool = True
     judge_provider: str = "kev"  # 'kev', 'jev', 'heuristic'
-    judge_model_name: str = "jaredpalmer/kev-4b"
+    judge_model_name: str = "jaredpalmer/kev-0.8b"
     judge_host_url: str = "http://localhost:8000/v1"
     judge_confidence_threshold: float = 0.85
     typesafe_api_key: Optional[str] = None

@@ -58,6 +58,11 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 
+# Internal Working Blueprints & Planning Trackers
+PLAN.md
+summary.md
+*summary.md
+
 # Common Geospatial & Weather Grid Formats
 *.nc
 *.nc4
